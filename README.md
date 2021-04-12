@@ -1,12 +1,12 @@
 
 ## Development environment
 
-フレームワーク： Next.js<br />
-静的型付け： TypeScript<br />
-スタイリング： Tailwind CSS<br />
-状態管理： Recoil<br />
-静的解析＆整形： ESLint + Prettier<br />
-テスト： Jest<br />
+Next.js<br />
+TypeScript<br />
+Tailwind CSS<br />
+Recoil<br />
+ESLint + Prettier<br />
+Jest<br />
 
 ## Getting Started
 
