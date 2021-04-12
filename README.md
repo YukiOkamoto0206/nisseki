@@ -1,5 +1,5 @@
 
-## Deploy on Vercel
+## Development environment
 
 フレームワーク： Next.js<br />
 静的型付け： TypeScript<br />
