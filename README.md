@@ -1,4 +1,12 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## Deploy on Vercel
+
+フレームワーク： Next.js<br />
+静的型付け： TypeScript<br />
+スタイリング： Tailwind CSS<br />
+状態管理： Recoil<br />
+静的解析＆整形： ESLint + Prettier<br />
+テスト： Jest<br />
 
 ## Getting Started
 
