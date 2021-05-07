@@ -43,8 +43,8 @@ const Index: React.FC = () => {
                   <div className="border-2-2 absolute h-full border"></div>
                   <div className="mb-8 flex justify-between items-center w-full right-timeline">
                     <div className="order-1 px-1 py-4 text-left">
-                      <p className="mb-3 text-base text-yellow-300">November, 2020</p>
-                      <h4 className="mb-3 font-bold text-lg md:text-2xl">日赤タクシー始動</h4>
+                      <p className="mb-3 text-base text-yellow-300">August, 2020</p>
+                      <h4 className="mb-3 font-bold text-lg md:text-2xl">日赤タクシー設立</h4>
                       <Image src={"/nisseki-start.jpg"} width={280} height={196}/>
                       <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
                         現代表取締役社長、飯泉翔太氏によって設立
@@ -54,7 +54,7 @@ const Index: React.FC = () => {
 
                   <div className="mb-8 flex justify-between items-center w-full right-timeline">
                     <div className="order-1 px-1 py-4 text-left">
-                      <p className="mb-3 text-base text-yellow-300">November, 2020</p>
+                      <p className="mb-3 text-base text-yellow-300">October, 2020</p>
                       <h4 className="mb-3 font-bold text-lg md:text-2xl">日赤タクシー始動</h4>
                       <Image src={"/first.jpg"} width={280} height={196}/>
                       <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
@@ -66,17 +66,28 @@ const Index: React.FC = () => {
                   <div className="mb-8 flex justify-between items-center w-full right-timeline">
                     <div className="order-1 px-1 py-4 text-left">
                       <p className="mb-3 text-base text-yellow-300">November, 2020</p>
-                      <h4 className="mb-3 font-bold text-lg md:text-2xl">日赤タクシー始動</h4>
+                      <h4 className="mb-3 font-bold text-lg md:text-2xl">事業拡大</h4>
                       <Image src={"/second.jpg"} width={280} height={196}/>
                       <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
-                        しかし、新たに、新車両mazda3、ロードスターRF、CX-8を導入することにより新規お客様、リピーターも急増した。
+                        新たに、新車両mazda3、ロードスターRF、CX-8を導入することで、「快適に移動をしたい」という顧客の要望を実現した。
                       </p>
                     </div>
                   </div>
 
                   <div className="mb-8 flex justify-between items-center w-full right-timeline">
                     <div className="order-1 px-1 py-4 text-left">
-                      <p className="mb-3 text-base text-yellow-300">November, 2020</p>
+                      <p className="mb-3 text-base text-yellow-300">December, 2020</p>
+                      <h4 className="mb-3 font-bold text-lg md:text-2xl">ヘッドハンティング</h4>
+                      <Image src={"/enter.jpg"} width={280} height={196}/>
+                      <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
+                        CEOの強力な人脈を駆使し、アメリカで修行した岡元氏をエンジニアとしてCTOに、別府市十文字原の奇才浅野CDを弊社に招き入れた。
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="mb-8 flex justify-between items-center w-full right-timeline">
+                    <div className="order-1 px-1 py-4 text-left">
+                      <p className="mb-3 text-base text-yellow-300">January, 2021</p>
                       <h4 className="mb-3 font-bold text-lg md:text-2xl">日赤タクシー始動</h4>
                       <Image src={"/third.jpg"} width={280} height={196}/>
                       <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
@@ -87,7 +98,7 @@ const Index: React.FC = () => {
 
                   <div className="mb-8 flex justify-between items-center w-full right-timeline">
                     <div className="order-1 px-1 py-4 text-left">
-                      <p className="mb-3 text-base text-yellow-300">November, 2020</p>
+                      <p className="mb-3 text-base text-yellow-300">March, 2021</p>
                       <h4 className="mb-3 font-bold text-lg md:text-2xl">日赤タクシー始動</h4>
                       <Image src={"/fourth.jpg"} width={280} height={196}/>
                       <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
@@ -97,7 +108,7 @@ const Index: React.FC = () => {
 
                   <div className="flex justify-between items-center w-full right-timeline">
                     <div className="order-1 px-1 py-4 text-left">
-                      <p className="mb-3 text-base text-yellow-300">November, 2020</p>
+                      <p className="mb-3 text-base text-yellow-300">April, 2021</p>
                       <h4 className="mb-3 font-bold text-lg md:text-2xl">日赤タクシー始動</h4>
                       <Image src={"/fifth.jpg"} width={280} height={196}/>
                       <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
