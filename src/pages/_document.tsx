@@ -52,7 +52,7 @@ export default class CustomDocument extends NextDocument {
     return (
       <Html lang="ja-JP">
         <Head>
-          <link rel="icon" href="safari-pinned-tab.svg" />
+          <link rel="icon" href="local_taxi_white_24dp.svg" />
         </Head>
         <body>
         <Main />
