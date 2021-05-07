@@ -88,7 +88,7 @@ const Index: React.FC = () => {
                   <div className="mb-8 flex justify-between items-center w-full right-timeline">
                     <div className="order-1 px-1 py-4 text-left">
                       <p className="mb-3 text-base text-yellow-300">January, 2021</p>
-                      <h4 className="mb-3 font-bold text-lg md:text-2xl">日赤タクシー始動</h4>
+                      <h4 className="mb-3 font-bold text-lg md:text-2xl">(瀬戸内)海外に進出</h4>
                       <Image src={"/third.jpg"} width={280} height={196}/>
                       <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
                         2021年1月には看護学生の女の子2人から香川県までの送迎の依頼が入り、大型プロジェクトへと進展してきた。
@@ -99,7 +99,7 @@ const Index: React.FC = () => {
                   <div className="mb-8 flex justify-between items-center w-full right-timeline">
                     <div className="order-1 px-1 py-4 text-left">
                       <p className="mb-3 text-base text-yellow-300">March, 2021</p>
-                      <h4 className="mb-3 font-bold text-lg md:text-2xl">日赤タクシー始動</h4>
+                      <h4 className="mb-3 font-bold text-lg md:text-2xl">Nissekiのブランドの確立</h4>
                       <Image src={"/fourth.jpg"} width={280} height={196}/>
                       <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
                         無償で安心・安全に満足を届けることをモットーとしており、大学内での評判も急増し、大企業へと成長している。                      </p>
@@ -109,7 +109,7 @@ const Index: React.FC = () => {
                   <div className="flex justify-between items-center w-full right-timeline">
                     <div className="order-1 px-1 py-4 text-left">
                       <p className="mb-3 text-base text-yellow-300">April, 2021</p>
-                      <h4 className="mb-3 font-bold text-lg md:text-2xl">日赤タクシー始動</h4>
+                      <h4 className="mb-3 font-bold text-lg md:text-2xl">野望達成か</h4>
                       <Image src={"/fifth.jpg"} width={280} height={196}/>
                       <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
                         また、2021年4月には日赤女子ツートップ(個人的)を送迎するといったS級任務を成し遂げることに成功した。                      </p>
