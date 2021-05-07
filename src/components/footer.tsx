@@ -13,6 +13,9 @@ export const Footer: React.FC = () => {
   const toTerms = () => {
     router.push("/terms")
   }
+  const toPresident = () => {
+    router.push("/president")
+  }
 
   return (
     <>
@@ -25,6 +28,7 @@ export const Footer: React.FC = () => {
           <div className={"mt-1"} onClick={toTop}>トップページ</div>
           <div className={"mt-1"} onClick={toContact}>ご予約・お問い合わせ</div>
           <div className={"mt-1"} onClick={toTerms}>利用規約</div>
+          <div className={"mt-1"} onClick={toPresident}>社長から皆さまへ</div>
         </div>
         <div className={"text-center mt-4"}>
           Copyright © 2021 NISSEKI inc.
