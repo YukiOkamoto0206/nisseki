@@ -18,7 +18,8 @@ const Index: React.FC = () => {
       </Head>
     <main className={"bg-black"}>
       <Header />
-      <section className="relative w-full text-white ">
+      <section className="w-full text-white ">
+        {/*<div className={"absolute text-white"}>BLACK TONE EDITION</div>*/}
         <Image src="/top-taxi.jpg" width={1920} height={1080}/>
       </section>
       <div
@@ -39,58 +40,71 @@ const Index: React.FC = () => {
             <div className="ml-0 md:ml-12 lg:w-2/3 sticky">
               <div className="container mx-auto w-full h-full">
                 <div className="relative wrap overflow-hidden p-10 h-full">
-                  <div className="border-2-2 border-yellow-555 absolute h-full border"></div>
-                  <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-                    <div className="order-1  px-1 py-4 text-right">
-                      <p className="mb-3 text-base text-yellow-300">October, 2020</p>
-                      <h4 className="mb-3 font-bold text-lg md:text-2xl">日赤タクシー創業</h4>
+                  <div className="border-2-2 absolute h-full border"></div>
+                  <div className="mb-8 flex justify-between items-center w-full right-timeline">
+                    <div className="order-1 px-1 py-4 text-left">
+                      <p className="mb-3 text-base text-yellow-300">November, 2020</p>
+                      <h4 className="mb-3 font-bold text-lg md:text-2xl">日赤タクシー始動</h4>
                       <Image src={"/nisseki-start.jpg"} width={280} height={196}/>
                       <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
-                        創業者である飯泉翔太氏によって日赤タクシー（日本赤十字タクシー株式会社）が設立される
-                      </p>
-                    </div>
-                  </div>
-                  <div className="mb-8 flex justify-between items-center w-full right-timeline">
-                    <div className="order-1 w-5/12"></div>
-                    <div className="order-1  w-5/12 px-1 py-4 text-left">
-                      <p className="mb-3 text-base text-yellow-300">6-9 May, 2021</p>
-                      <h4 className="mb-3 font-bold text-lg md:text-2xl">Participation</h4>
-                      <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
-                        Participate online. The links for your registered events will be sent to you via email and
-                        whatsapp
-                        groups. Use those links and show your talent.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-                    <div className="order-1 w-5/12"></div>
-                    <div className="order-1 w-5/12 px-1 py-4 text-right">
-                      <p className="mb-3 text-base text-yellow-300"> 10 May, 2021</p>
-                      <h4 className="mb-3 font-bold text-lg md:text-2xl">Result Declaration</h4>
-                      <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
-                        The ultimate genius will be revealed by our judging panel on 10th May, 2021 and the resukts will
-                        be
-                        announced on the whatsapp groups and will be mailed to you.
+                        現代表取締役社長、飯泉翔太氏によって設立
                       </p>
                     </div>
                   </div>
 
                   <div className="mb-8 flex justify-between items-center w-full right-timeline">
-                    <div className="order-1 w-5/12"></div>
-
-                    <div className="order-1  w-5/12 px-1 py-4">
-                      <p className="mb-3 text-base text-yellow-300">12 May, 2021</p>
-                      <h4 className="mb-3 font-bold  text-lg md:text-2xl text-left">Prize Distribution</h4>
+                    <div className="order-1 px-1 py-4 text-left">
+                      <p className="mb-3 text-base text-yellow-300">November, 2020</p>
+                      <h4 className="mb-3 font-bold text-lg md:text-2xl">日赤タクシー始動</h4>
+                      <Image src={"/first.jpg"} width={280} height={196}/>
                       <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
-                        The winners will be contacted by our team for their addresses and the winning goodies will be
-                        sent at
-                        their addresses.
+                        開始当初は予約件数もほとんどなく、どん底からスタートであった。
                       </p>
+                    </div>
+                  </div>
+
+                  <div className="mb-8 flex justify-between items-center w-full right-timeline">
+                    <div className="order-1 px-1 py-4 text-left">
+                      <p className="mb-3 text-base text-yellow-300">November, 2020</p>
+                      <h4 className="mb-3 font-bold text-lg md:text-2xl">日赤タクシー始動</h4>
+                      <Image src={"/second.jpg"} width={280} height={196}/>
+                      <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
+                        しかし、新たに、新車両mazda3、ロードスターRF、CX-8を導入することにより新規お客様、リピーターも急増した。
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="mb-8 flex justify-between items-center w-full right-timeline">
+                    <div className="order-1 px-1 py-4 text-left">
+                      <p className="mb-3 text-base text-yellow-300">November, 2020</p>
+                      <h4 className="mb-3 font-bold text-lg md:text-2xl">日赤タクシー始動</h4>
+                      <Image src={"/third.jpg"} width={280} height={196}/>
+                      <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
+                        2021年1月には看護学生の女の子2人から香川県までの送迎の依頼が入り、大型プロジェクトへと進展してきた。
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="mb-8 flex justify-between items-center w-full right-timeline">
+                    <div className="order-1 px-1 py-4 text-left">
+                      <p className="mb-3 text-base text-yellow-300">November, 2020</p>
+                      <h4 className="mb-3 font-bold text-lg md:text-2xl">日赤タクシー始動</h4>
+                      <Image src={"/fourth.jpg"} width={280} height={196}/>
+                      <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
+                        無償で安心・安全に満足を届けることをモットーとしており、大学内での評判も急増し、大企業へと成長している。                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex justify-between items-center w-full right-timeline">
+                    <div className="order-1 px-1 py-4 text-left">
+                      <p className="mb-3 text-base text-yellow-300">November, 2020</p>
+                      <h4 className="mb-3 font-bold text-lg md:text-2xl">日赤タクシー始動</h4>
+                      <Image src={"/fifth.jpg"} width={280} height={196}/>
+                      <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
+                        また、2021年4月には日赤女子ツートップ(個人的)を送迎するといったS級任務を成し遂げることに成功した。                      </p>
                     </div>
                   </div>
                 </div>
-                <img className="mx-auto -mt-36 md:-mt-36"
-                     src="https://user-images.githubusercontent.com/54521023/116968861-ef21a000-acd2-11eb-95ac-a34b5b490265.png"/>
               </div>
             </div>
           </div>
