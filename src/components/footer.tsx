@@ -26,7 +26,7 @@ export const Footer: React.FC = () => {
         <div className={"mx-auto w-3/4 -mt-2"}>
           <div className={"text-xl border-b-4 border-gray-900"}>日赤タクシーについて</div>
           <div className={"mt-1"} onClick={toTop}>トップページ</div>
-          <div className={"mt-1"} onClick={toContact}>ご予約・お問い合わせ</div>
+          <div className={"mt-1"} onClick={toContact}>Staff紹介</div>
           <div className={"mt-1"} onClick={toTerms}>利用規約</div>
           <div className={"mt-1"} onClick={toPresident}>社長から皆さまへ</div>
         </div>
