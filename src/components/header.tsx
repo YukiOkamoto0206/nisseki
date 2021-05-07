@@ -9,7 +9,7 @@ const Header: React.VFC<{}> = () => {
     <>
       <div className="flex items-center justify-between flex-wrap bg-teal py-2 pl-2 pr-6 bg-black">
         <div className="flex items-center flex-no-shrink text-white mr-6">
-          <Image src={"/icon-logo.jpg"} width={280} height={55}/>
+          <Image src={"/logo.jpg"} width={280} height={55}/>
         </div>
         <div className="block lg:hidden">
           <button
@@ -20,8 +20,6 @@ const Header: React.VFC<{}> = () => {
           </button>
         </div>
       </div>
-        {/*</Link>*/}
-      {/*</header>*/}
     </>
   )
 }
