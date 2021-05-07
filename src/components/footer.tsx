@@ -26,7 +26,7 @@ export const Footer: React.FC = () => {
           <div className={"mt-1"} onClick={toContact}>お問い合わせ</div>
           <div className={"mt-1"} onClick={toTerms}>利用規約</div>
         </div>
-        <div className={"mx-auto w-1/2"}>
+        <div className={"text-center mt-4"}>
           Copyright © 2021 NISSEKI inc.
         </div>
       </div>

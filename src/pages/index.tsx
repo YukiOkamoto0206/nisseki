@@ -10,18 +10,13 @@ const Index: React.FC = () => {
       <Head>
         <title>日赤タクシー</title>
       </Head>
-    <main>
-      <section className="relative w-full text-white">
-        {/*<div className="lg:mx-auto px-5">*/}
-          <Header />
-        {/*</div>*/}
+    <main className={"bg-black"}>
+      <Header />
+      <section className="relative w-full text-white ">
         <Image src="/top-taxi.jpg" width={1920} height={1080}/>
       </section>
-    {/*<div className={"p-16 bg-indigo-400 h-screen"}>*/}
-    {/*  <div className={"text-center font-bold text-9xl"}>テスト</div>*/}
-    {/*</div>*/}
       <section>
-        <div className="bg-black text-white py-8">
+        <div className="text-white py-8">
           <div className="container mx-auto flex flex-col items-start md:flex-row my-12 md:my-24">
             <div className="flex flex-col w-full sticky md:top-36 lg:w-1/3 mt-2 md:mt-12 px-8">
               <p className="ml-2 text-yellow-300 uppercase tracking-loose">Working Process</p>
