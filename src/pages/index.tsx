@@ -8,7 +8,7 @@ import { useRouter } from "next/router"
 const Index: React.FC = () => {
   const router = useRouter()
   const toInstagram = () => {
-    router.push("https://instagram.com/shota7735?igshid=qalzwftnczpr")
+    router.push("https://instagram.com/is__richard?igshid=1rb5120gz5j8s")
   }
 
   return (
