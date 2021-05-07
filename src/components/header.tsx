@@ -9,8 +9,9 @@ const Header: React.VFC<{}> = () => {
     <>
       <div className="flex items-center justify-between flex-wrap bg-teal p-6 bg-black">
         <div className="flex items-center flex-no-shrink text-white mr-6">
-          <Image src="/local_taxi_white_24dp.svg" width={50} height={50} />
-          <span className="font-black text-xl tracking-tight">日赤タクシー</span>
+          {/*<Image src="/local_taxi_white_24dp.svg" width={50} height={50} />*/}
+          {/*<span className="font-black text-xl tracking-tight">日赤タクシー</span>*/}
+          <Image src={"/icon-logo.jpg"} width={240} height={40}/>
         </div>
         <div className="block lg:hidden">
           <button
