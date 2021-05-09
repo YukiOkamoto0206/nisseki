@@ -28,6 +28,9 @@ const Header: React.VFC<{}> = () => {
   const toPresident = () => {
     router.push("/president")
   }
+  const toCovid = () => {
+    router.push("/covid")
+  }
 
   return (
     <>
@@ -62,6 +65,7 @@ const Header: React.VFC<{}> = () => {
             <li onClick={toContact} className={"my-2"}>Staff紹介</li>
             <li onClick={toTerms} className={"mt-2"}>利用規約</li>
             <li onClick={toPresident} className={"mt-2"}>社長から皆さまへ</li>
+            <li onClick={toCovid} className={"mt-2"}>一時休業のお知らせ</li>
           </ul>
         </div>
       ):(

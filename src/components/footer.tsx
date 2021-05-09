@@ -16,10 +16,13 @@ export const Footer: React.FC = () => {
   const toPresident = () => {
     router.push("/president")
   }
+  const toCovid = () => {
+    router.push("/covid")
+  }
 
   return (
     <>
-      <div className={"w-full bg-gray-400 h-64"}>
+      <div className={"w-full bg-gray-400 h-72"}>
         <div className={"text-center pt-2"}>
           <Image src="/local_taxi_white_24dp.svg" width={80} height={80}/>
         </div>
@@ -29,6 +32,7 @@ export const Footer: React.FC = () => {
           <div className={"mt-1"} onClick={toContact}>Staff紹介</div>
           <div className={"mt-1"} onClick={toTerms}>利用規約</div>
           <div className={"mt-1"} onClick={toPresident}>社長から皆さまへ</div>
+          <div className={"mt-1"} onClick={toCovid}>一時休業のお知らせ</div>
         </div>
         <div className={"text-center mt-4"}>
           Copyright © 2021 NISSEKI inc.

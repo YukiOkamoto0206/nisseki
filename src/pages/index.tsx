@@ -14,7 +14,7 @@ const Index: React.FC = () => {
   return (
     <>
       <Head>
-        <title>日赤タクシー</title>
+        <title>Nisseki Taxi</title>
       </Head>
     <main className={"bg-black"}>
       <Header />
