@@ -1,15 +1,29 @@
-import React from "react"
+import React, { useState } from "react"
 import LocalTaxiIcon from '@material-ui/icons/LocalTaxi';
 import Head from "next/head"
 import Header from "../components/header"
 import Image from "next/image"
 import { Footer } from "../components/footer"
 import { useRouter } from "next/router"
+import Modal from "react-modal"
 const Index: React.FC = () => {
   const router = useRouter()
   const toInstagram = () => {
     router.push("https://instagram.com/is__richard?igshid=1rb5120gz5j8s")
   }
+  Modal.setAppElement('#__next')
+
+    const [modalIsOpen,setIsOpen] = useState(false)
+
+    // モーダルを開く処理
+    const openModal = () => {
+      setIsOpen(true)
+    }
+
+    // モーダルを閉じる処理
+    const closeModal = () => {
+      setIsOpen(false)
+    }
 
   return (
     <>
@@ -21,11 +35,40 @@ const Index: React.FC = () => {
       <section className="w-full text-white ">
         <Image src="/top-taxi.jpg" width={1920} height={1080}/>
       </section>
+
+      <Modal
+        // isOpenがtrueならモダールが起動する
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        className={"fixed top-1/4 left-1/4 right-3/4 h-1/2 w-1/2 bottom-3/4 bg-black text-white"}
+      >
+        <div className={"float-right p-1"}>
+          <Image src={"/close_white_24dp.svg"} width={20} height={20} onClick={closeModal}/>
+        </div>
+        <div className={"mt-3 ml-3 text-xl"}>車種選択をする</div>
+        <div className={"my-1 mx-2"}>
+          <form method="post" action="example.cgi">
+            <div className={"float-left"}>
+            <input type="radio" name="q1"></input> MAZDA 3
+            </div>
+            <Image src={"/mazda3.jpeg"} width={1140} height={641} />
+            <input type="radio" name="q1"></input> MAZDA CX-8
+            <Image src={"/cx-8.jpeg"} width={1440} height={800} />
+          </form>
+        </div>
+        <div
+          className="mx-auto mt-1 bg-transparent mr-auto hover:bg-yellow-300 text-yellow-300 hover:text-white rounded shadow hover:shadow-lg py-1 px-2 border border-yellow-300 hover:border-transparent w-1/2 text-center"
+          onClick={toInstagram}
+        >
+          ご予約
+        </div>
+      </Modal>
+
       <div
         className="mx-auto mt-3 bg-transparent mr-auto hover:bg-yellow-300 text-yellow-300 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-yellow-300 hover:border-transparent w-1/3 text-center"
-        onClick={toInstagram}
+        onClick={openModal}
       >
-        ご予約
+        車種選択
       </div>
       <section>
         <div className="text-white pb-2">
@@ -128,9 +171,9 @@ const Index: React.FC = () => {
         <div className={"text-white text-center"}>安全安心迅速に日赤タクシーが目的地までお供します</div>
         <div
           className="mx-auto mt-3 bg-transparent mr-auto hover:bg-yellow-300 text-yellow-300 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-yellow-300 hover:border-transparent w-1/3 text-center"
-          onClick={toInstagram}
+          onClick={openModal}
         >
-          ご予約
+          車種選択
         </div>
       </section>
 
