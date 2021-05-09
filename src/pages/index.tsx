@@ -19,7 +19,6 @@ const Index: React.FC = () => {
     <main className={"bg-black"}>
       <Header />
       <section className="w-full text-white ">
-        {/*<div className={"absolute text-white"}>BLACK TONE EDITION</div>*/}
         <Image src="/top-taxi.jpg" width={1920} height={1080}/>
       </section>
       <div
