@@ -41,7 +41,7 @@ export const Footer: React.FC = () => {
             社長から皆さまへ
           </div>
           <div className={"mt-1"} onClick={toCovid}>
-            一時休業のお知らせ
+            営業再開のお知らせ
           </div>
         </div>
         <div className={"text-center mt-4"}>Copyright © 2021 NISSEKI inc.</div>

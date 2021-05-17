@@ -72,7 +72,7 @@ const Header: React.VFC<{}> = () => {
                 社長から皆さまへ
               </li>
               <li onClick={toCovid} className={"mt-2"}>
-                一時休業のお知らせ
+                営業再開のお知らせ
               </li>
             </ul>
           </div>
