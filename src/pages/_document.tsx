@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 import NextDocument, {
   Html,
   Head,
@@ -6,15 +6,13 @@ import NextDocument, {
   NextScript,
   DocumentContext,
   DocumentInitialProps
-} from 'next/document'
-import { RenderPageResult } from 'next/dist/next-server/lib/utils'
-import { ServerStyleSheet } from 'styled-components'
-import { ServerStyleSheets as MaterialServerStyleSheets } from '@material-ui/core'
+} from "next/document"
+import { RenderPageResult } from "next/dist/next-server/lib/utils"
+import { ServerStyleSheet } from "styled-components"
+import { ServerStyleSheets as MaterialServerStyleSheets } from "@material-ui/core"
 
 export default class CustomDocument extends NextDocument {
-  static async getInitialProps(
-    ctx: DocumentContext
-  ): Promise<DocumentInitialProps> {
+  static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
     const styledComponentsSheet = new ServerStyleSheet()
     const materialUiSheets = new MaterialServerStyleSheets()
     const originalRenderPage = ctx.renderPage
@@ -26,10 +24,7 @@ export default class CustomDocument extends NextDocument {
             props
           ): React.ReactElement<{
             sheet: ServerStyleSheet
-          }> =>
-            styledComponentsSheet.collectStyles(
-              materialUiSheets.collect(<App {...props} />)
-            )
+          }> => styledComponentsSheet.collectStyles(materialUiSheets.collect(<App {...props} />))
         })
 
       const initialProps = await NextDocument.getInitialProps(ctx)
@@ -55,8 +50,8 @@ export default class CustomDocument extends NextDocument {
           <link rel="icon" href="local_taxi_white_24dp.svg" />
         </Head>
         <body>
-        <Main />
-        <NextScript />
+          <Main />
+          <NextScript />
         </body>
       </Html>
     )

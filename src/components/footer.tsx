@@ -1,6 +1,6 @@
 import React from "react"
 import Image from "next/image"
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router"
 
 export const Footer: React.FC = () => {
   const router = useRouter()
@@ -24,19 +24,27 @@ export const Footer: React.FC = () => {
     <>
       <div className={"w-full bg-gray-400 h-72"}>
         <div className={"text-center pt-2"}>
-          <Image src="/local_taxi_white_24dp.svg" width={80} height={80}/>
+          <Image src="/local_taxi_white_24dp.svg" width={80} height={80} />
         </div>
         <div className={"mx-auto w-3/4 -mt-2"}>
           <div className={"text-xl border-b-4 border-gray-900"}>日赤タクシーについて</div>
-          <div className={"mt-1"} onClick={toTop}>トップページ</div>
-          <div className={"mt-1"} onClick={toContact}>Staff紹介</div>
-          <div className={"mt-1"} onClick={toTerms}>利用規約</div>
-          <div className={"mt-1"} onClick={toPresident}>社長から皆さまへ</div>
-          <div className={"mt-1"} onClick={toCovid}>一時休業のお知らせ</div>
+          <div className={"mt-1"} onClick={toTop}>
+            トップページ
+          </div>
+          <div className={"mt-1"} onClick={toContact}>
+            Staff紹介
+          </div>
+          <div className={"mt-1"} onClick={toTerms}>
+            利用規約
+          </div>
+          <div className={"mt-1"} onClick={toPresident}>
+            社長から皆さまへ
+          </div>
+          <div className={"mt-1"} onClick={toCovid}>
+            一時休業のお知らせ
+          </div>
         </div>
-        <div className={"text-center mt-4"}>
-          Copyright © 2021 NISSEKI inc.
-        </div>
+        <div className={"text-center mt-4"}>Copyright © 2021 NISSEKI inc.</div>
       </div>
     </>
   )

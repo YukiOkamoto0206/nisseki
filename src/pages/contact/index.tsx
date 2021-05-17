@@ -44,6 +44,34 @@ const Index: React.FC = () => {
             </p>
           </div>
         </div>
+
+        <div
+          className="max-w-xs rounded overflow-hidden my-2 mx-auto border-2"
+          onClick={() => {}}
+        >
+          <div className="px-6 py-4">
+            <Image src={"/yuya.jpg"} width={1108} height={1478} />
+            <div className="text-white font-bold text-xl mb-2">Yuya (COO)</div>
+            <p className="text-white text-base">
+              I am Chief Operating Officer and kinda driver of Mercedes-Benz.
+              career: Faculty of Science Department of Chemistry at Ehime University
+            </p>
+          </div>
+        </div>
+
+        <div
+          className="max-w-xs rounded overflow-hidden my-2 mx-auto border-2"
+          onClick={() => {}}
+        >
+          <div className="px-6 py-4">
+            <Image src={"/kota.jpg"} width={1478} height={1108} />
+            <div className="text-white font-bold text-xl mb-2">Kota (CFO)</div>
+            <p className="text-white text-base">
+              I am a brother of the president and Chief Chief Financial Officer. I have a strong passion focusing on my gf, so I don't need you bitches🤗
+              carrer: Border-Free Rank University
+            </p>
+          </div>
+        </div>
         <Footer />
       </div>
     </>

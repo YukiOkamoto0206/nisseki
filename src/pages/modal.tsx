@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import Modal from 'react-modal';
+import { useState } from "react"
+import Modal from "react-modal"
 import Image from "next/image"
 // スタイリング
 const customStyles = {
@@ -10,23 +10,23 @@ const customStyles = {
     backgroundColor: "rgba(0,0,0,0.3)"
   },
 
-  content : {
-    top                   : '50%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    marginRight           : '-50%',
-    width                 : '500px',
-    height                : '300px',
-    transform             : 'translate(-50%, -50%)'
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    width: "500px",
+    height: "300px",
+    transform: "translate(-50%, -50%)"
   }
-};
+}
 
 // アプリのルートを識別するクエリセレクタを指定する。
-Modal.setAppElement('#__next')
+Modal.setAppElement("#__next")
 
 const SelectModal = () => {
-  const [modalIsOpen,setIsOpen] = useState(false)
+  const [modalIsOpen, setIsOpen] = useState(false)
 
   // モーダルを開く処理
   const openModal = () => {
@@ -57,7 +57,7 @@ const SelectModal = () => {
         className={"fixed top-1/4 left-1/4 right-3/4 h-1/2 w-1/2 bottom-3/4 bg-gray-300 "}
       >
         <div className={"float-right p-1"}>
-          <Image src={"/close_white_24dp.svg"} width={20} height={20} onClick={closeModal}/>
+          <Image src={"/close_white_24dp.svg"} width={20} height={20} onClick={closeModal} />
         </div>
         <div className={"mt-3 ml-3 text-xl"}>現在使用可能車</div>
         <div className={"my-1 mx-2"}>
