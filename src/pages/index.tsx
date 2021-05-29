@@ -23,11 +23,7 @@ const Index: React.FC = () => {
 
   return (
     <>
-      <Head>
-        <title>Nisseki Taxi</title>
-      </Head>
-      <main className={"bg-black"}>
-<Layout>
+      <Layout title={"Nisseki Taxi"}>
         <section className="w-full text-white ">
           <Image src="/top-taxi.jpg" width={1920} height={1080} />
         </section>
@@ -142,8 +138,7 @@ const Index: React.FC = () => {
           </div>
           <Button text={"車種選択"} onClick={openModal} />
         </section>
-</Layout>
-      </main>
+      </Layout>
     </>
   )
 }

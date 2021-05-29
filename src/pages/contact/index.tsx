@@ -5,8 +5,8 @@ import Layout from "../../components/layout"
 const Index: React.FC = () => {
   return (
     <>
-      <Layout>
-        <div className={"text-bold text-2xl text-center p-2 text-white border-b-2"}>Staff</div>
+      <Layout title={"Staff紹介"}>
+        <div className={"text-bold text-2xl text-center p-2 text-white border-b-2"}>Staff紹介</div>
 
         <Staff
           name={"Atsuya (Creative Director)"}
