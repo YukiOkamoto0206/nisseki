@@ -1,20 +1,15 @@
 import React, { useState } from "react"
 import Head from "next/head"
-import Header from "../components/header"
 import Image from "next/image"
-import { Footer } from "../components/footer"
-import { useRouter } from "next/router"
 import Modal from "react-modal"
 import Achieve from "../components/achieve"
 import Title from "../components/title"
 import Button from "../components/button"
-import CarModal from "../components/carModal"
 import CarSelect from "../components/carModal"
-const Index: React.FC = () => {
-  const router = useRouter()
+import Layout from "../components/layout"
 
+const Index: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
-  // const [isSelecting, setIsSelecting] = useState(true)
 
   // モーダルを開く処理
   const openModal = () => {
@@ -32,7 +27,7 @@ const Index: React.FC = () => {
         <title>Nisseki Taxi</title>
       </Head>
       <main className={"bg-black"}>
-        <Header />
+<Layout>
         <section className="w-full text-white ">
           <Image src="/top-taxi.jpg" width={1920} height={1080} />
         </section>
@@ -147,7 +142,7 @@ const Index: React.FC = () => {
           </div>
           <Button text={"車種選択"} onClick={openModal} />
         </section>
-        <Footer />
+</Layout>
       </main>
     </>
   )

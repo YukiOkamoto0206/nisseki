@@ -1,13 +1,11 @@
 import React from "react"
-import Header from "../../components/header"
-import { Footer } from "../../components/footer"
 import Staff from "../../components/staff"
+import Layout from "../../components/layout"
 
 const Index: React.FC = () => {
   return (
     <>
-      <div className={"bg-black"}>
-        <Header />
+      <Layout>
         <div className={"text-bold text-2xl text-center p-2 text-white border-b-2"}>Staff</div>
 
         <Staff
@@ -46,8 +44,7 @@ const Index: React.FC = () => {
             "I am a brother of the president and Chief Chief Financial Officer. I have a strong passion focusing on my gf, so I don't need you bitches🤗 carrer: Border-Free Rank University"
           }
         />
-        <Footer />
-      </div>
+      </Layout>
     </>
   )
 }

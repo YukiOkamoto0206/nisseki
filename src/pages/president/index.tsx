@@ -1,13 +1,11 @@
-import Header from "../../components/header"
 import React from "react"
-import { Footer } from "../../components/footer"
 import Image from "next/image"
+import Layout from "../../components/layout"
 
 const Index: React.FC = () => {
   return (
     <>
-      <Header />
-      <div className={"bg-black text-white pb-6"}>
+<Layout>      <div className={"bg-black text-white pb-6"}>
         <div className={"w-3/4 mx-auto"}>
           <div className={"text-bold text-2xl text-center p-2"}>社長から皆さまへ</div>
           <Image src={"/president.jpg"} width={294} height={220} />
@@ -25,8 +23,8 @@ const Index: React.FC = () => {
           <div className={"text-center"}>代表取締役社長 飯泉翔太</div>
         </div>
       </div>
-      <Footer />
-    </>
+    </Layout>
+      </>
   )
 }
 
