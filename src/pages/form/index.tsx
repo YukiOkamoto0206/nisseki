@@ -21,28 +21,24 @@ const Index: React.VFC = () => {
     const textValue: string = useRecoilValue(textFormState)
     const setTextValue: SetterOrUpdater<string> = useSetRecoilState(textFormState)
     // const [textValue, setTextValue] = useRecoilState(textFormState)
-    return(
+    return (
       <>
-        <Input holder={"Recoil holder"} setter={setTextValue} value={textValue}/>
+        <Input holder={"Recoil holder"} setter={setTextValue} value={textValue} />
         <button onClick={toUseState}>次へ</button>
       </>
     )
   }
   const UseState = () => {
     const [textValue, setTextValue] = useState("")
-    return(
+    return (
       <>
-        <Input holder={"useState holder"} setter={setTextValue} value={textValue}/>
+        <Input holder={"useState holder"} setter={setTextValue} value={textValue} />
         <button onClick={toRecoil}>次へ</button>
       </>
     )
   }
 
-  return(
-    <>
-      {pageStatusValue === PageStatus.RecoilPage ? <Recoil /> : <UseState />}
-    </>
-  )
+  return <>{pageStatusValue === PageStatus.RecoilPage ? <Recoil /> : <UseState />}</>
 }
 
 export default Index

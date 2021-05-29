@@ -8,7 +8,7 @@
     "start": "next start",
     "test": "jest",
     "test:coverage": "jest --collect-coverage",
-    "format": "prettier --write src/**/*.{ts,tsx}"
+    "format": "prettier --write src/**/*.{ts,tsx} src/**/**/*.{ts,tsx}"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.4",

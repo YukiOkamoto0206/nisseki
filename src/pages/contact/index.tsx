@@ -1,77 +1,51 @@
 import React from "react"
 import Header from "../../components/header"
 import { Footer } from "../../components/footer"
-import Image from "next/image"
-import { useRouter } from "next/router"
+import Staff from "../../components/staff"
 
 const Index: React.FC = () => {
-  const router = useRouter()
-  const toAsano = () => {
-    router.push("https://instagram.com/div_asano20?igshid=1v53rev6zr57l")
-  }
-  const toYuki = () => {
-    router.push("https://instagram.com/yuki_0206_cs?igshid=8st84s8xc104")
-  }
   return (
     <>
       <div className={"bg-black"}>
-      <Header/>
+        <Header />
         <div className={"text-bold text-2xl text-center p-2 text-white border-b-2"}>Staff</div>
-      <div
-        className="max-w-xs rounded overflow-hidden my-2 mx-auto border-2"
-        onClick={toAsano}
-      >
-        <div className="px-6 py-4">
-          <Image src={"/asano.jpg"} width={1478} height={1108} />
-          <div className="text-white font-bold text-xl mb-2">Atsuya (Creative Director)</div>
-          <p className="text-white text-base">
-           I am mainly in charge of design and public relations at our company. We will do our best to support you day and night.
-            career：Ritsumeikan Asia Pacific University
-          </p>
-        </div>
-      </div>
 
-        <div
-          className="max-w-xs rounded overflow-hidden my-2 mx-auto border-2"
-          onClick={toYuki}
-        >
-          <div className="px-6 py-4">
-            <Image src={"/yukiki.jpg"} width={748} height={540} />
-            <div className="text-white font-bold text-xl mb-2">Yuki (CTO)</div>
-            <p className="text-white text-base">
-              I am an engineer as Chief Technology Officer at Nisseki Taxi. The more, the merrier. You know what I mean?
-              career: California State University
-            </p>
-          </div>
-        </div>
-
-        <div
-          className="max-w-xs rounded overflow-hidden my-2 mx-auto border-2"
-          onClick={() => {}}
-        >
-          <div className="px-6 py-4">
-            <Image src={"/yuya.jpg"} width={1108} height={1478} />
-            <div className="text-white font-bold text-xl mb-2">Yuya (COO)</div>
-            <p className="text-white text-base">
-              I am Chief Operating Officer and kinda driver of Mercedes-Benz.
-              career: Faculty of Science Department of Chemistry at Ehime University
-            </p>
-          </div>
-        </div>
-
-        <div
-          className="max-w-xs rounded overflow-hidden my-2 mx-auto border-2"
-          onClick={() => {}}
-        >
-          <div className="px-6 py-4">
-            <Image src={"/kota.jpg"} width={1478} height={1108} />
-            <div className="text-white font-bold text-xl mb-2">Kota (CFO)</div>
-            <p className="text-white text-base">
-              I am a brother of the president and Chief Chief Financial Officer. I have a strong passion focusing on my gf, so I don't need you bitches🤗
-              carrer: Border-Free Rank University
-            </p>
-          </div>
-        </div>
+        <Staff
+          name={"Atsuya (Creative Director)"}
+          src={"/asano.jpg"}
+          width={1103}
+          height={1478}
+          introduce={
+            "I am mainly in charge of design and public relations at our company. We will do our best to support you day and night. career：Ritsumeikan Asia Pacific University"
+          }
+        />
+        <Staff
+          name={"Yuki (CTO)"}
+          src={"/yukiki.jpg"}
+          width={748}
+          height={540}
+          introduce={
+            "I am an engineer as Chief Technology Officer at Nisseki Taxi. The more, the merrier. You know what I mean? career: California State University"
+          }
+        />
+        <Staff
+          name={"Yuya (COO)"}
+          src={"/yuya.jpg"}
+          width={1108}
+          height={1478}
+          introduce={
+            "I am Chief Operating Officer and kinda driver of Mercedes-Benz. career: Faculty of Science Department of Chemistry at Ehime University"
+          }
+        />
+        <Staff
+          name={"Kota (CFO)"}
+          src={"/kota.jpg"}
+          width={1478}
+          height={1108}
+          introduce={
+            "I am a brother of the president and Chief Chief Financial Officer. I have a strong passion focusing on my gf, so I don't need you bitches🤗 carrer: Border-Free Rank University"
+          }
+        />
         <Footer />
       </div>
     </>
