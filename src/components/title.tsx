@@ -1,7 +1,7 @@
 import React from "react"
 
 type Props = {
-  engTitle: string,
+  engTitle: string
   jpTitle: string
 }
 const Title: React.VFC<Props> = ({ engTitle, jpTitle }) => {

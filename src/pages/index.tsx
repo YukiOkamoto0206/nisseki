@@ -8,13 +8,13 @@ import Modal from "react-modal"
 import Achieve from "../components/achieve"
 import Title from "../components/title"
 import Button from "../components/button"
+import CarModal from "../components/carModal"
+import CarSelect from "../components/carModal"
 const Index: React.FC = () => {
   const router = useRouter()
-  const toInstagram = () => {
-    router.push("https://instagram.com/is__richard?igshid=1rb5120gz5j8s")
-  }
 
-  const [modalIsOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
+  // const [isSelecting, setIsSelecting] = useState(true)
 
   // モーダルを開く処理
   const openModal = () => {
@@ -39,40 +39,23 @@ const Index: React.FC = () => {
 
         <Modal
           // isOpenがtrueならモダールが起動する
-          isOpen={modalIsOpen}
+          isOpen={isOpen}
           onRequestClose={closeModal}
           className={
             "fixed top-1/4 left-1/4 right-3/4 h-1/2 w-1/2 bottom-3/4 bg-black text-white overflow-y-scroll rounded-xl border-black"
           }
         >
-          <div className={"float-right p-1"}>
-            <Image src={"/close_white_24dp.svg"} width={20} height={20} onClick={closeModal} />
+          <div className={"float-right p-1 pt-3"}>
+            <Image src={"/close_white_24dp.svg"} width={25} height={25} onClick={closeModal} />
           </div>
-          <div className={"mt-3 ml-3 text-xl"}>車種選択をする</div>
-          <div className={"my-1 mx-2"}>
-            <form method="post" action="example.cgi">
-              <div className={"float-left"}>
-                <input type="radio" name="q1"></input> MAZDA 3
-              </div>
-              <Image src={"/mazda3.jpeg"} width={1140} height={641} />
-              <input type="radio" name="q2"></input> MAZDA CX-8
-              <Image src={"/cx-8.jpeg"} width={1440} height={800} />
-              <input type="radio" name="q3"></input> ROADSTAR
-              <Image src={"/roadstar.jpg"} width={708} height={472} />
-              <input type="radio" name="q3"></input> DEMIO
-              <Image src={"/demio.jpg"} width={870} height={640} />
-              <input type="radio" name="q3"></input> IZUMI(入荷しました)
-              <Image src={"/broken-car.jpg"} width={1284} height={952} />
-            </form>
-          </div>
-          <Button text={"ご予約"} onClick={toInstagram} inModal={true}/>
+          <CarSelect />
         </Modal>
 
-        <Button text={"車種選択"} onClick={openModal}/>
+        <Button text={"車種選択"} onClick={openModal} />
         <section>
           <div className="text-white pb-2">
             <div className="container mx-auto flex flex-col items-start md:flex-row my-12 md:my-24">
-              <Title engTitle={"WORKING PROCESS"} jpTitle={"実績"}/>
+              <Title engTitle={"WORKING PROCESS"} jpTitle={"実績"} />
               <div className="ml-0 md:ml-12 lg:w-2/3 sticky">
                 <div className="container mx-auto w-full h-full">
                   <div className="relative wrap overflow-hidden p-10 h-full">
@@ -162,7 +145,7 @@ const Index: React.FC = () => {
           <div className={"text-white text-center"}>
             安全安心迅速に日赤タクシーが目的地までお供します
           </div>
-          <Button text={"車種選択"} onClick={openModal}/>
+          <Button text={"車種選択"} onClick={openModal} />
         </section>
         <Footer />
       </main>
