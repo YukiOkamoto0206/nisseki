@@ -19,6 +19,9 @@ export const Footer: React.FC = () => {
   const toCovid = () => {
     router.push("/covid")
   }
+  const toCompany = () => {
+    router.push("/company")
+  }
 
   return (
     <>
@@ -33,6 +36,9 @@ export const Footer: React.FC = () => {
           </div>
           <div className={"mt-1"} onClick={toContact}>
             Staff紹介
+          </div>
+          <div className={"mt-1"} onClick={toCompany}>
+            会社情報
           </div>
           <div className={"mt-1"} onClick={toTerms}>
             利用規約

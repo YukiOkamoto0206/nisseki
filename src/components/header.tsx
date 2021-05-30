@@ -31,6 +31,9 @@ const Header: React.VFC<{}> = () => {
   const toCovid = () => {
     router.push("/covid")
   }
+  const toCompany = () => {
+    router.push("/company")
+  }
 
   return (
     <>
@@ -64,6 +67,9 @@ const Header: React.VFC<{}> = () => {
               </li>
               <li onClick={toContact} className={"my-2"}>
                 Staff紹介
+              </li>
+              <li onClick={toCompany} className={"my-2"}>
+                会社情報
               </li>
               <li onClick={toTerms} className={"mt-2"}>
                 利用規約
