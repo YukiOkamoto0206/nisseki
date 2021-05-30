@@ -26,7 +26,7 @@ const Index: React.FC = () => {
 
   const divStyle = {
     background: "white",
-    fontSize: 7.5,
+    fontSize: 7.5
   }
 
   const [size, setSize] = useState<undefined | google.maps.Size>(undefined)
@@ -40,12 +40,12 @@ const Index: React.FC = () => {
   return (
     <Layout title={"会社情報"}>
       <div className={"text-center m-6"}>
-        <PageTitle title={"会社情報"}/>
-        <Info title={"会社名"} content={"株式会社日赤タクシー"}/>
-        <Info title={"設立"} content={"2020年8月1日"}/>
-        <Info title={"資本金"} content={"300万円［2021年5月末時点］"}/>
-        <Info title={"代表者"} content={"飯泉翔太"}/>
-        <Info title={"所在地"} content={"広島県廿日市市阿品台東１−２"}/>
+        <PageTitle title={"会社情報"} />
+        <Info title={"会社名"} content={"株式会社日赤タクシー"} />
+        <Info title={"設立"} content={"2020年8月1日"} />
+        <Info title={"資本金"} content={"300万円［2021年5月末時点］"} />
+        <Info title={"代表者"} content={"飯泉翔太"} />
+        <Info title={"所在地"} content={"広島県廿日市市阿品台東１−２"} />
         <LoadScript
           googleMapsApiKey={process.env.NEXT_PUBLIC_API_KEY as string}
           onLoad={() => createOffsetSize()}
@@ -53,12 +53,16 @@ const Index: React.FC = () => {
           <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={17}>
             <Marker position={positionNisseki} />
             <InfoWindow position={positionNisseki} options={infoWindowOptions}>
-              <div style={divStyle}>
-                <h1 className={"mx-auto"}>日赤本社</h1>
+              <div className={"mx-auto"} style={divStyle}>
+                <h1>日赤本社</h1>
               </div>
             </InfoWindow>
           </GoogleMap>
         </LoadScript>
+        <p className={"text-white text-xs mt-1"}>
+          *エラーが表示されますが、Google Cloud
+          PlatFormに課金していないことが原因です。申し訳ございません、
+        </p>
       </div>
     </Layout>
   )
