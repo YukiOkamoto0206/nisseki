@@ -10,10 +10,12 @@ const Index: React.FC = () => {
         <div className={"bg-black text-white pb-6"}>
           <div className={"w-3/4 mx-auto"}>
             <div className={"text-bold text-2xl text-center p-2"}>社長から皆さまへ</div>
-            <Image src={"/president.jpg"} width={294} height={220} />
+            <div className={"text-center"}>
+              <Image src={"/president.jpg"} width={294} height={220} />
+            </div>
             <div className={"mt-2"}>
               日赤タクシーをいつもご愛顧くださる皆様へ、
-              日赤タクシーは2020年10月に日本赤十字広島看護大学の学生1人によって誕生しました。私飯泉は看護大学に通いながら、お客様を送迎させていただくことによって満足してもらいたいという強い思いから、日赤タクシーの創立へと至りました。
+              日赤タクシーは2020年8月に日本赤十字広島看護大学の学生1人によって誕生しました。私飯泉は看護大学に通いながら、お客様を送迎させていただくことによって満足してもらいたいという強い思いから、日赤タクシーの創立へと至りました。
             </div>
             <div className={"my-2"}>
               日本経済が成熟化する現在、人々の移動のニーズは日々刻々と変化しております。日赤タクシーは、タクシー業界のリーディングカンパニーとして、我が県広島を支える新しい都市交通のあり方を提言して参ります。
