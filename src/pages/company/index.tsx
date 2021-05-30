@@ -1,9 +1,5 @@
 import React, { useState } from "react"
-import axios from "axios"
 import Layout from "../../components/layout"
-import useSWR from "swr"
-import fetch from "node-fetch"
-import { GetStaticProps } from "next"
 import { GoogleMap, LoadScript, InfoWindow, Marker } from "@react-google-maps/api"
 import Info from "../../components/info"
 import PageTitle from "../../components/pageTitle"
@@ -61,7 +57,7 @@ const Index: React.FC = () => {
         </LoadScript>
         <p className={"text-white text-xs mt-1"}>
           *エラーが表示されますが、Google Cloud
-          PlatFormに課金していないことが原因です。申し訳ございません、
+          PlatFormに課金していないことが原因です。申し訳ございません。
         </p>
       </div>
     </Layout>

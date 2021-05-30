@@ -16,7 +16,7 @@ const Index: React.FC = () => {
           width={1103}
           height={1478}
           introduce={
-            "I am mainly in charge of design and public relations at our company. We will do our best to support you day and night. career：Ritsumeikan Asia Pacific University"
+            "I am mainly in charge of design and public relations at our company. I drunk and drove therefore I got buzz cut dude. career：Ritsumeikan Asia Pacific University"
           }
         />
         <Staff
@@ -43,7 +43,7 @@ const Index: React.FC = () => {
           width={1478}
           height={1108}
           introduce={
-            "I am a brother of the president and Chief Chief Financial Officer. I have a strong passion focusing on my gf, so I don't need you bitches🤗 carrer: Border-Free Rank University"
+            "I am a brother of the president and Chief Financial Officer. I have a strong passion focusing on my gf, so I don't need you bitches🤗 carrer: Border-Free Rank University"
           }
         />
         </div>

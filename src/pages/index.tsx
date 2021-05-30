@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import Head from "next/head"
 import Image from "next/image"
 import Modal from "react-modal"
 import Achieve from "../components/achieve"
