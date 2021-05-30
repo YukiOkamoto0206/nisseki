@@ -7,6 +7,7 @@ const Index: React.FC = () => {
   return (
     <>
       <Layout title={"Staff紹介"}>
+        <div className={"max-w-xs mx-auto"}>
         <PageTitle title={"Staff紹介"} />
 
         <Staff
@@ -45,6 +46,7 @@ const Index: React.FC = () => {
             "I am a brother of the president and Chief Chief Financial Officer. I have a strong passion focusing on my gf, so I don't need you bitches🤗 carrer: Border-Free Rank University"
           }
         />
+        </div>
       </Layout>
     </>
   )

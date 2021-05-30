@@ -12,7 +12,7 @@ type Props = {
 const Staff: React.VFC<Props> = ({ name, src, width, height, introduce }) => {
   return (
     <>
-      <div className="max-w-xs rounded overflow-hidden my-5 mx-auto border-2">
+      <div className="rounded overflow-hidden my-5 border-2">
         <div className="px-6 py-4">
           <Image src={src} width={width} height={height} />
           <div className="text-white font-bold text-xl mb-2">{name}</div>
