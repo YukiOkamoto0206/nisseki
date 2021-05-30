@@ -25,7 +25,7 @@ export const Footer: React.FC = () => {
 
   return (
     <>
-      <div className={"w-full bg-gray-400 h-72"}>
+      <div className={"w-full bg-gray-400"}>
         <div className={"text-center pt-2"}>
           <Image src="/local_taxi_white_24dp.svg" width={80} height={80} />
         </div>

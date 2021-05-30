@@ -25,7 +25,8 @@ const Index: React.FC = () => {
 
   const divStyle = {
     background: "white",
-    fontSize: 12
+    fontSize: 7.5,
+    textAlign: center,
   }
 
   const [size, setSize] = useState<undefined | google.maps.Size>(undefined)
