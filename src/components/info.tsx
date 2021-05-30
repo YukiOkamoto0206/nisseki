@@ -1,7 +1,6 @@
-
 type Props = {
-  title: string,
-  content: string,
+  title: string
+  content: string
 }
 
 const Info: React.VFC<Props> = ({ title, content }) => {

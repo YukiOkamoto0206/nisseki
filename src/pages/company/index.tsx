@@ -53,7 +53,7 @@ const Index: React.FC = () => {
           <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={17}>
             <Marker position={positionNisseki} />
             <InfoWindow position={positionNisseki} options={infoWindowOptions}>
-              <div className={"mx-auto"} style={divStyle}>
+              <div className={"text-center"} style={divStyle}>
                 <h1>日赤本社</h1>
               </div>
             </InfoWindow>

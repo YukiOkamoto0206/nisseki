@@ -8,9 +8,9 @@ const Index: React.FC = () => {
       <Layout title={"営業再開のお知らせ"}>
         <div className={"bg-black text-white pb-6"}>
           <div className={"w-3/4 mx-auto"}>
-            <PageTitle title={"営業再開のお知らせ"}/>
+            <PageTitle title={"営業再開のお知らせ"} />
             <div className={"mt-3"}>
-            <Image src={"/covid.jpg"} width={1883} height={870}/>
+              <Image src={"/covid.jpg"} width={1883} height={870} />
             </div>
             <div className={"mt-2 line-through"}>
               弊社のユーザである某サッカー選手2人組がコロナウイルス感染後に乗車したとのことで日赤タクシー車の一つであるベンツを消毒中でございます。

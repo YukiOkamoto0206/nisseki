@@ -6,7 +6,7 @@ const Index: React.FC = () => {
     <>
       <Layout title={"利用規約"}>
         <div className={"p-5 text-white bg-black"}>
-          <PageTitle title={"利用規約"}/>
+          <PageTitle title={"利用規約"} />
           <div>
             <div className={"mt-1"}>
               この利用規約（以下，「本規約」といいます。）は，日赤タクシー（以下，「当社」といいます。）がこのウェブサイト上で提供するサービス（以下，「本サービス」といいます。）の利用条件を定めるものです。陰キャラの皆さま（以下，「ユーザー」といいます。）には，本規約に従って，本サービスをご利用いただきます。

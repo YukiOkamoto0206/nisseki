@@ -10,7 +10,7 @@ const Index: React.FC = () => {
         {" "}
         <div className={"bg-black text-white pb-6"}>
           <div className={"w-3/4 mx-auto"}>
-            <PageTitle title={"社長から皆さまへ"}/>
+            <PageTitle title={"社長から皆さまへ"} />
             <div className={"text-center mt-3"}>
               <Image src={"/president.jpg"} width={294} height={220} />
             </div>

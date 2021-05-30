@@ -7,7 +7,7 @@ const Index: React.FC = () => {
   return (
     <>
       <Layout title={"Staff紹介"}>
-        <PageTitle title={"Staff紹介"}/>
+        <PageTitle title={"Staff紹介"} />
 
         <Staff
           name={"Atsuya (Creative Director)"}
