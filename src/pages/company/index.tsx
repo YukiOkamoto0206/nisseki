@@ -26,7 +26,6 @@ const Index: React.FC = () => {
   const divStyle = {
     background: "white",
     fontSize: 7.5,
-    textAlign: center,
   }
 
   const [size, setSize] = useState<undefined | google.maps.Size>(undefined)
@@ -54,7 +53,7 @@ const Index: React.FC = () => {
             <Marker position={positionNisseki} />
             <InfoWindow position={positionNisseki} options={infoWindowOptions}>
               <div style={divStyle}>
-                <h1>日赤本社</h1>
+                <h1 className={"mx-auto"}>日赤本社</h1>
               </div>
             </InfoWindow>
           </GoogleMap>
