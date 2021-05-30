@@ -6,6 +6,7 @@ import fetch from "node-fetch"
 import { GetStaticProps } from "next"
 import { GoogleMap, LoadScript, InfoWindow, Marker } from "@react-google-maps/api"
 import Info from "../../components/info"
+import PageTitle from "../../components/pageTitle"
 
 const Index: React.FC = () => {
   const containerStyle = {
@@ -39,7 +40,7 @@ const Index: React.FC = () => {
   return (
     <Layout title={"会社情報"}>
       <div className={"text-center m-6"}>
-        <div className={""}>会社情報</div>
+        <PageTitle title={"会社情報"}/>
         <Info title={"会社名"} content={"株式会社日赤タクシー"}/>
         <Info title={"設立"} content={"2020年8月1日"}/>
         <Info title={"資本金"} content={"300万円［2021年5月末時点］"}/>

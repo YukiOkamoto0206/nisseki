@@ -1,6 +1,7 @@
 import React from "react"
 import Image from "next/image"
 import Layout from "../../components/layout"
+import PageTitle from "../../components/pageTitle"
 
 const Index: React.FC = () => {
   return (
@@ -9,8 +10,8 @@ const Index: React.FC = () => {
         {" "}
         <div className={"bg-black text-white pb-6"}>
           <div className={"w-3/4 mx-auto"}>
-            <div className={"text-bold text-2xl text-center p-2"}>社長から皆さまへ</div>
-            <div className={"text-center"}>
+            <PageTitle title={"社長から皆さまへ"}/>
+            <div className={"text-center mt-3"}>
               <Image src={"/president.jpg"} width={294} height={220} />
             </div>
             <div className={"mt-2"}>

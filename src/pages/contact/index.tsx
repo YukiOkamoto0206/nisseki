@@ -1,12 +1,13 @@
 import React from "react"
 import Staff from "../../components/staff"
 import Layout from "../../components/layout"
+import PageTitle from "../../components/pageTitle"
 
 const Index: React.FC = () => {
   return (
     <>
       <Layout title={"Staff紹介"}>
-        <div className={"text-bold text-2xl text-center p-2 text-white border-b-2"}>Staff紹介</div>
+        <PageTitle title={"Staff紹介"}/>
 
         <Staff
           name={"Atsuya (Creative Director)"}
