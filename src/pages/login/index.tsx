@@ -1,6 +1,6 @@
 import React, { useState } from "react"
-import { logIn } from "../../utils/auth"
-import { useRecoilValue } from "recoil"
+import { logIn, logOut } from "../../utils/auth"
+import { useRecoilState, useRecoilValue } from "recoil"
 import { isLoggedInState } from "../../atom/isLoginAtom"
 import Button from "../../components/button"
 import { Input } from "../../components/input"
@@ -14,7 +14,7 @@ const Login: React.VFC = () => {
   const [password, setPassword] = useState("")
   const [eMailValidMessage, setEMailValidMessage] = useState("")
   const [errorMessage, setErrorMessage] = useState("")
-  const isLoggedIn = useRecoilValue(isLoggedInState)
+  const [isLoggedIn, setIsLoggedIn] = useRecoilState(isLoggedInState)
 
   // メールアドレスの書式チェック
   const validateEmail = (value: string) => {
@@ -39,7 +39,14 @@ const Login: React.VFC = () => {
       setErrorMessage("※メールアドレスまたはパスワードが違います")
     } else {
       router.push("/add")
+      setIsLoggedIn(true)
     }
+  }
+
+  const toLogOut = () => {
+    logOut().then(() => {
+      setIsLoggedIn(false)
+    })
   }
 
   return (
@@ -64,18 +71,18 @@ const Login: React.VFC = () => {
         />
 
         <div className="text-red-500 mb-5">{errorMessage}</div>
-
-        <Button
-          text="ログイン"
-          onClick={handleSubmit}
-        />
+        {isLoggedIn ? (
+          <Button text="ログアウト" onClick={toLogOut} />
+        ) : (
+          <Button text="ログイン" onClick={handleSubmit} />
+        )}
 
         <div className={"text-white my-5"}>
           現在の状態：{isLoggedIn !== undefined && (isLoggedIn ? "ログイン済み" : "ログアウト済み")}
         </div>
       </form>
     </Layout>
-)
+  )
 }
 
 export default Login
