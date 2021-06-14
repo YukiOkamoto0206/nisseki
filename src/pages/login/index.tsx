@@ -32,9 +32,7 @@ const Login: React.VFC = () => {
   // ログインボタン押下時
   const handleSubmit = async (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
     e.preventDefault()
-    console.log("login")
     const isSuccess = await logIn(eMail, password)
-    console.log(isSuccess)
     if (!isSuccess) {
       setErrorMessage("※メールアドレスまたはパスワードが違います")
     } else {
