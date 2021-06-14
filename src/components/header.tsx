@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react"
-import Link from "next/link"
 import Image from "next/image"
 import styled from "styled-components"
 import { useRouter } from "next/router"
@@ -33,6 +32,12 @@ const Header: React.VFC<{}> = () => {
   }
   const toCompany = () => {
     router.push("/company")
+  }
+  const toSukiya = () => {
+    router.push("/sukiya")
+  }
+  const toAddPage = () => {
+    router.push("/add")
   }
 
   return (
@@ -71,6 +76,9 @@ const Header: React.VFC<{}> = () => {
               <li onClick={toCompany} className={"my-2"}>
                 会社情報
               </li>
+              <li onClick={toSukiya} className={"my-2"}>
+                すき家情報
+              </li>
               <li onClick={toTerms} className={"mt-2"}>
                 利用規約
               </li>
@@ -79,6 +87,9 @@ const Header: React.VFC<{}> = () => {
               </li>
               <li onClick={toCovid} className={"mt-2"}>
                 営業再開のお知らせ
+              </li>
+              <li onClick={toAddPage} className={"my-2"}>
+                管理者画面
               </li>
             </ul>
           </div>

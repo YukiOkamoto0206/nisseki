@@ -22,7 +22,12 @@ export const Footer: React.FC = () => {
   const toCompany = () => {
     router.push("/company")
   }
-
+  const toSukiya = () => {
+    router.push("/sukiya")
+  }
+  const toAddPage = () => {
+    router.push("/add")
+  }
   return (
     <>
       <div className={"w-full bg-gray-400"}>
@@ -40,6 +45,9 @@ export const Footer: React.FC = () => {
           <div className={"mt-1"} onClick={toCompany}>
             会社情報
           </div>
+          <div className={"mt-1"} onClick={toSukiya}>
+            すき家情報
+          </div>
           <div className={"mt-1"} onClick={toTerms}>
             利用規約
           </div>
@@ -48,6 +56,9 @@ export const Footer: React.FC = () => {
           </div>
           <div className={"mt-1"} onClick={toCovid}>
             営業再開のお知らせ
+          </div>
+          <div className={"mt-1"} onClick={toAddPage}>
+            管理者画面
           </div>
         </div>
         <div className={"text-center mt-4"}>Copyright © 2021 NISSEKI inc.</div>

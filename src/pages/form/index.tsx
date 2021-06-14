@@ -5,6 +5,7 @@ import { SetterOrUpdater, useSetRecoilState, useRecoilValue, useRecoilState } fr
 import { useRouter } from "next/router"
 import { pageStatusState } from "../../atom/pageStatusAtom"
 import { PageStatus } from "../../types/pageType"
+import { logOut } from "../../utils/auth"
 
 const Index: React.VFC = () => {
   const router = useRouter()
@@ -25,6 +26,7 @@ const Index: React.VFC = () => {
       <>
         <Input holder={"Recoil holder"} setter={setTextValue} value={textValue} />
         <button onClick={toUseState}>次へ</button>
+        <button onClick={logOut}>ログアウトする</button>
       </>
     )
   }
