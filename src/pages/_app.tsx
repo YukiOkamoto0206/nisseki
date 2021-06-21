@@ -26,8 +26,10 @@ const MyApp = ({ Component, pageProps }): JSX.Element => {
       <StylesProvider injectFirst>
         <MaterialUIThemeProvider theme={theme}>
           <StyledComponentsThemeProvider theme={theme}>
-            <CssBaseline />
-            <Component {...pageProps} />
+            <div className={"md:max-w-md "}>
+              <CssBaseline />
+              <Component {...pageProps} />
+            </div>
           </StyledComponentsThemeProvider>
         </MaterialUIThemeProvider>
       </StylesProvider>

@@ -46,7 +46,7 @@ const Header: React.VFC<{}> = () => {
         <div className="flex items-center flex-no-shrink text-white mr-6">
           <Image src={"/logo.jpg"} width={280} height={55} onClick={toTop} />
         </div>
-        <div className="block lg:hidden z-30">
+        <div className="block z-30">
           {isOpen ? (
             <button onClick={openHamburger} className="pt-1">
               <Image src={"/close_white_24dp.svg"} width={35} height={35} />

@@ -33,7 +33,7 @@ export const AuthRouterWrapper: VFC<{ children: ReactElement }> = ({ children })
     const routing = async () => {
       if (isLoggedIn !== null) {
         if (isLoggedIn) {
-          if (router.pathname === "/login" || router.pathname === "/") {
+          if (router.pathname === "/login") {
             await router.push("/add")
           }
         } else if (router.pathname !== "/login") {
