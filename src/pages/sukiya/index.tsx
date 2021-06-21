@@ -3,12 +3,20 @@ import Layout from "../../components/layout"
 import PageTitle from "../../components/pageTitle"
 import Button from "../../components/button"
 import { useRouter } from "next/router"
+import { db } from "../../lib/db"
+import { GetStaticProps } from "next"
+import { SUKIYA } from "../../types/types"
 
-const Index: React.VFC = () => {
+interface SUKIYAINTERFACE {
+  infos: SUKIYA[]
+}
+
+const Index: React.VFC<SUKIYAINTERFACE> = ({ infos }) => {
   const router = useRouter()
   const toAddPage = () => {
     router.push("/add")
   }
+  //TODO: infosが時刻順に並んでいないので処理を追加する必要あり
   return (
     <Layout>
       <div className={"my-3"}>
@@ -17,39 +25,19 @@ const Index: React.VFC = () => {
           <div className={""}>
             <div className={"text-white ml-1 my-3"}>
               <div className={"text-xl"}>2021年度</div>
-              <div>12月31日　夜　宮内店👑</div>
-              <div>1月1日　夜　段原店</div>
-              <div>1月4日　朝　段原店</div>
-              <div>1月4日　昼　今治店</div>
-              <div>1月4日　深夜　11号松山久米窪田店</div>
-              <div>1月4日　深夜　道後樋又店👑</div>
-              <div>1月5日　深夜　楽々園店🍛👑</div>
-              <div>1月10日　夜　31号呉海岸通り店</div>
-              <div>1月14日　夜　宮内店</div>
-              <div>1月15日　早早朝　宮内店</div>
-              <div>1月15日　深夜　八木店</div>
-              <div>1月16日　深夜　54号広島可別店</div>
-              <div>1月25日　夜　宮内店</div>
-              <div>3月10日　深夜　宮内店</div>
-              <div>3月15日　朝　54号広島可部店</div>
-              <div>3月15日　深夜　宮内店</div>
-              <div>3月22日　深夜　深川店</div>
-              <div>3月25日　深夜　深川店</div>
-              <div>3月28日　夜　　500号別府石垣店👑</div>
-              <div>3月29日　朝　　500号別府石垣店👑</div>
-              <div>3月30日　朝　　500号別府石垣店👑</div>
-              <div>4月2日　深夜　　段原店👑</div>
-              <div>4月3日　深夜　　深川店</div>
-              <div>4月6日　深夜　　宮内店</div>
-              <div>4月7日　夜　　　深川店👑</div>
-              <div>4月10日　深夜　　立町店　　たかひろ嘔吐</div>
-              <div>4月14日　深夜　　段原店👑</div>
-              <div>5月1日　深夜　　広島丹那店👑</div>
-              <div>5月7日　深夜　　宮内店</div>
-              <div>5月13日　夜　　　深川店</div>
-              <div>5月28日　深夜　54号広島可部店</div>
-              <div>6月5日　夕方　宮内店</div>
-              <div>6月10日　夜　　深川店</div>
+              <ul>
+                {infos.map((info) => {
+                  return (
+                    <li className={"flex mt-1"}>
+                      <div className={"ml-2"}>
+                        {String(info.date).replace("T", " ").replace(":00.000Z", "")}
+                      </div>
+                      <div className={"ml-2"}>{info.place}</div>
+                      <div className={"ml-2"}>{info.isKing ? "👑" : ""}</div>
+                    </li>
+                  )
+                })}
+              </ul>
             </div>
           </div>
         </div>
@@ -59,3 +47,23 @@ const Index: React.VFC = () => {
   )
 }
 export default Index
+
+export const getStaticProps: GetStaticProps = async () => {
+  const infos: { id: string; date: Date; place: string; isKing: boolean }[] = []
+  const ref = await db.collection("sukiyaList").get()
+  ref.docs.map((doc) => {
+    const data = {
+      id: doc.id,
+      date: doc.data().date.toDate(),
+      place: doc.data().place,
+      isKing: doc.data().isKing
+    }
+    const json = JSON.parse(JSON.stringify(data))
+    infos.push(json)
+  })
+  return {
+    props: {
+      infos
+    }
+  }
+}
