@@ -4,9 +4,28 @@ import Layout from "../../components/layout"
 import Button from "../../components/button"
 import PageTitle from "../../components/pageTitle"
 import { Input } from "../../components/input"
+import { db } from "../../lib/db"
 
 const Index: React.VFC = () => {
   const [info, setInfo] = useState("")
+  const ts = "2021-1-4 13:00:00"
+  const date = Date.parse(ts.replace(/-/g, "/")) / 1000
+  const docData = {
+    date: "2021年1月4日 14:00:00 UTC+9",
+    isKing: false,
+    place: "今治店"
+  }
+  const addInfo = async () => {
+    await db
+      .collection("sukiyaList")
+      .add(docData)
+      .then(function () {
+        console.log("success")
+      })
+      .catch(function (error) {
+        console.log("error", error)
+      })
+  }
 
   return (
     <Layout>
@@ -21,7 +40,7 @@ const Index: React.VFC = () => {
               value={info}
               size={"w-64 h-6 rounded p-2"}
             />
-            <button className={"text-white"}>{info}追加</button>
+            <Button onClick={addInfo} text="追加" />
           </div>
           <Button text={"ログアウト"} onClick={logOut} />
         </div>

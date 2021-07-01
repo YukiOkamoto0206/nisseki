@@ -41,7 +41,7 @@ const Index: React.VFC<SUKIYAINTERFACE> = ({ infos }) => {
             </div>
           </div>
         </div>
-        <Button text={"追加する"} onClick={toAddPage} />
+        <Button text="追加する" onClick={toAddPage} />
       </div>
     </Layout>
   )

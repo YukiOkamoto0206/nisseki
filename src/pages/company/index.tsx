@@ -24,9 +24,7 @@ const Index: React.FC = () => {
         <Info title={"資本金"} content={"300万円［2021年5月末時点］"} />
         <Info title={"代表者"} content={"飯泉翔太"} />
         <Info title={"所在地"} content={"広島県廿日市市阿品台東１−２"} />
-        <LoadScript
-          googleMapsApiKey={process.env.NEXT_PUBLIC_API_KEY as string}
-        >
+        <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_API_KEY as string}>
           <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={14}>
             <Marker position={center} />
           </GoogleMap>
