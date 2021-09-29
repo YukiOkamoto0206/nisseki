@@ -16,15 +16,15 @@ const Index: React.VFC = () => {
     place: "今治店"
   }
   const addInfo = async () => {
-    await db
-      .collection("sukiyaList")
-      .add(docData)
-      .then(function () {
-        console.log("success")
-      })
-      .catch(function (error) {
-        console.log("error", error)
-      })
+    // await db
+    //   .collection("sukiyaList")
+    //   .add(docData)
+    //   .then(function () {
+    //     console.log("success")
+    //   })
+    //   .catch(function (error) {
+    //     console.log("error", error)
+    //   })
   }
 
   return (
