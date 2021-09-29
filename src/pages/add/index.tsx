@@ -35,7 +35,7 @@ const Index: React.VFC = () => {
             <PageTitle title={"追加画面"} />
             <div className={"my-2"}></div>
             <Input
-              holder={"12月31日　夜　宮内店　　　　👑"}
+              holder={"12月31日　夜　宮内店　　　👑"}
               setter={setInfo}
               value={info}
               size={"w-64 h-6 rounded p-2"}
