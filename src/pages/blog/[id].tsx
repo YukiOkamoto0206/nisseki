@@ -11,7 +11,7 @@ const PostDetail: React.FC<Article> = (blog) => {
         <div className={"w-3/4 mx-auto text-white"}>
           <div className="font-bold text-xl text-center border-b">{blog.title}</div>
           <div
-            className="my-5"
+            className="my-5 whitespace-pre-line"
             dangerouslySetInnerHTML={{
               __html: `${blog.body}`
             }}
