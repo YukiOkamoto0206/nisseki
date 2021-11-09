@@ -9,8 +9,9 @@ import Layout from "../components/layout"
 import { client } from "../lib/client"
 import { GetStaticProps } from "next"
 import { type } from "os"
+import Post from "../components/post"
 
-type Article = {
+export type Article = {
   id: string
   createdAt: string
   updatedAt: string
@@ -19,7 +20,7 @@ type Article = {
   title: string
   body: string
 }
-type Articles = {
+export type Articles = {
   blogs: [
     {
       id: string
@@ -73,13 +74,9 @@ const Index: React.FC<Articles> = ({ blogs }) => {
           <Title engTitle={""} jpTitle={"お知らせ"} />
           <div className="overflow-y-scroll h-44 mx-7 p-2">
             <ul>
-              {blogs.map((blog: Article) => {
-                return (
-                  <li key={blog.id} className="mt-3">
-                    <a className="text-white border-b">{blog.title}</a>
-                  </li>
-                )
-              })}
+              {blogs.map((blog: Article) => (
+                <Post key={blog.id} {...blog} />
+              ))}
             </ul>
           </div>
         </section>
@@ -188,7 +185,6 @@ export default Index
 
 export const getStaticProps: GetStaticProps = async () => {
   const data: any = await client.get({ endpoint: "blog" })
-  console.log(data.contents)
   return {
     props: {
       blogs: data.contents
