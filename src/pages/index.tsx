@@ -6,8 +6,34 @@ import Title from "../components/title"
 import Button from "../components/button"
 import CarSelect from "../components/carModal"
 import Layout from "../components/layout"
+import { client } from "../lib/client"
+import { GetStaticProps } from "next"
+import { type } from "os"
 
-const Index: React.FC = () => {
+type Article = {
+  id: string
+  createdAt: string
+  updatedAt: string
+  publishedAt: string
+  revisedAt: string
+  title: string
+  body: string
+}
+type Articles = {
+  blogs: [
+    {
+      id: string
+      createdAt: string
+      updatedAt: string
+      publishedAt: string
+      revisedAt: string
+      title: string
+      body: string
+    }
+  ]
+}
+
+const Index: React.FC<Articles> = ({ blogs }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   // モーダルを開く処理
@@ -42,6 +68,22 @@ const Index: React.FC = () => {
         </Modal>
 
         <Button text={"車種選択"} onClick={openModal} />
+
+        <section className="mt-10">
+          <Title engTitle={""} jpTitle={"お知らせ"} />
+          <div className="overflow-y-scroll h-44 mx-7 p-2">
+            <ul>
+              {blogs.map((blog: Article) => {
+                return (
+                  <li key={blog.id} className="mt-3">
+                    <a className="text-white border-b">{blog.title}</a>
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+        </section>
+
         <section>
           <div className="text-white pb-2">
             <div className="container mx-auto flex flex-col items-start md:flex-row my-12 md:my-24">
@@ -143,3 +185,13 @@ const Index: React.FC = () => {
 }
 
 export default Index
+
+export const getStaticProps: GetStaticProps = async () => {
+  const data: any = await client.get({ endpoint: "blog" })
+  console.log(data.contents)
+  return {
+    props: {
+      blogs: data.contents
+    }
+  }
+}
